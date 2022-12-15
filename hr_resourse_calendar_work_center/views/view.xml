@@ -2,12 +2,13 @@
 <odoo>
     <record id="resource_calendar_attendance_tree_inherit" model="ir.ui.view">
         <field name="model">resource.calendar.attendance</field>
-        <field name="inherit_id" ref="resource_calendar_attendance_tree" />
+        <field name="inherit_id" ref="resource.view_resource_calendar_attendance_tree" />
         <field name="arch" type="xml">
             <field name="dayofweek" position="after">
                 <field
                     name="work_center_id"
                     optional="show"
+                    domain="[('is_work_center', '=', True)]"
                 />
             </field>
         </field>
