@@ -16,4 +16,3 @@ class ResourceCalendarAttendance(models.Model):
     work_center_id = fields.Many2one('res.partner', string="Work Center", required=True, ondelete='cascade', index=True)
 
 
-
