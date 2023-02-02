@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="hr_attendance_work_center.hr_partner_attendance_action_kanban" model="ir.actions.act_window">
+        <field name="domain">[('work_center_user_ids.user_id', '=', uid)]</field>
+    </record>
+
+</odoo>
