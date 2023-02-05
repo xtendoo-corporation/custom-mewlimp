@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
+    <record id="res_partner_form_view" model="ir.ui.view">
+        <field name="name">res.partner.form.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <page name="internal_notes" position="after">
+                <page string="Work Centres" name="accounting" attrs="{'invisible': [('is_work_center','=',False)]}">
+                    <field name="work_center_user_ids"/>
+                </page>
+            </page>
+        </field>
+    </record>
+
     <record id="hr_attendance_work_center.hr_partner_attendance_action_kanban" model="ir.actions.act_window">
-        <field name="domain">[('work_center_user_ids.user_id', '=', uid)]</field>
+        <field name="domain">[('work_center_user_ids', '=', uid)]</field>
     </record>
 
 </odoo>

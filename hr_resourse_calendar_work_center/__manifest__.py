@@ -12,7 +12,6 @@
         "hr_attendance_work_center",
     ],
     "data": [
-        "security/ir.model.access.csv",
         "views/res_partner_view.xml",
         "views/resource_calendar_attendance_view.xml",
     ],
