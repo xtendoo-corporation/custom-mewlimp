@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <page name="internal_notes" position="after">
-                <page string="Work Centres" name="accounting" attrs="{'invisible': [('is_work_center','=',False)]}">
+                <page string="Authorized Users" name="authorized_users" attrs="{'invisible': [('is_work_center','=',False)]}">
                     <field name="work_center_user_ids"/>
                 </page>
             </page>
